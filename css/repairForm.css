@@ -1,0 +1,12 @@
+.form-container{
+    height: 900px;
+
+}
+
+.main{
+    display: none;
+}
+
+.active{
+    display:block
+}

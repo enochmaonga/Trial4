@@ -6,64 +6,385 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maendeleo Tracker</title>
     <!-- CSS only -->
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-</head>
+    <link rel="stylesheet" href="../css/colors.css">
+    <link rel="stylesheet" href="../css/progressBar.css">
+    <link rel="stylesheet" href="../css/repairForm.css">
+  </head>
 <body>
     <header>
-        <nav class="navbar navbar-dark bg-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                <img src="../img/logo.png" alt=""  height="24" class="d-inline-block align-text-top">
-                Maendeleo Tracker
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body ">
-                  <ul class="navbar-nav  justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Reports</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Book Request</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Out for swap</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Requests
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item  d-flex justify-content-between align-items-start" href="#">Pending<span class="badge bg-danger rounded-pill">14</span></a></li>
-                        <li class="d-flex justify-content-between align-items-start"><a class="dropdown-item d-flex justify-content-between align-items-start" href="#">Out for repair <span class="badge bg-warning rounded-pill">14</span></a>
-                          
-                        
-                        </li>
-                        <li><a class="dropdown-item d-flex justify-content-between align-items-start" href="#">Repaired<span class="badge bg-success rounded-pill">14</span></a></li>
-                        <li>
-                          <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
-                  </form>
-                </div>
-              </div>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="../img/logo.png" alt=""  height="24" class="d-inline-block align-text-top">
+            Maendeleo Tracker
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-          </nav>
+            <div class="offcanvas-body ">
+              <ul class="navbar-nav  justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="./repair_form.html">Reports</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Book Request</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./repair_form.html">Out for swap</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Requests
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item  d-flex justify-content-between align-items-start" href="./pending.html">Pending<span class="badge bg-danger rounded-pill">14</span></a></li>
+                    <li class="d-flex justify-content-between align-items-start"><a class="dropdown-item d-flex justify-content-between align-items-start" href="./out_for_repair.html">Out for repair <span class="badge bg-warning rounded-pill">14</span></a>
+                    </li>
+                    <li><a class="dropdown-item d-flex justify-content-between align-items-start" href="./repaired.html">Repaired<span class="badge bg-success rounded-pill">14</span></a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
 
     </header>
     <main>
+        <section>
+            <div class="form-container row vh-75">
+              <div class="card col-lg-6 h-75 mx-auto p-3 bg-success-form mt-4"> 
+                <div class="saf">
+                    <h3 class="text-white display-6">Repair Form</h3>
+                </div>
+                <div class="row bg-white"> 
+                    <div class="left-side col-5 p-5"> 
+                      <ul class="progres_bar"> 
+                        <li class = "active">Customer Details</li> 
+                        <li class = "" >Device Details</li> 
+                        <li class = "">Fault Description</li>
+                        <li class = "" >StandBy Device</li>
+                        <li class = "" >Retail Center Details</li> 
+                        <li class = "" >Repair Center Details</li>
+                    </ul>
+                    </div>
+                    <div class="right-side col-md-12 col-lg-7">
+                        <div class="main active">
+                            <fieldset>
+                                <legend>Customer Details</legend>
+                                <div class="input_div">
+                                    <div class="input_text">
+                                      <label for="name" class="form-label">Name</label> 
+                                      <input  type="text"  name="name"   class="form-control" id="customerName"/>
+                                    </div>
+                                </div>
+            
+                                <div class="input_div"> 
+                                    <div class="input_text">
+                                      <label for="phone" class="form-label">Phone</label>  
+                                      <input  type="text"  name="phone" class="form-control"  id="phone" />
+                                    </div>
+                                    <div class="input_text">
+                                      <label for="email" class="form-label">Email</label> 
+                                      <input  type="text"  name="email"  class="form-control"  id="email" />
+                                    </div>
+                                </div>
+            
+                                <div class="input_div"> 
+                                    <div class="input_text">
+                                      <label for="nationalID" class="form-label">National ID</label>   
+                                      <input  type="text"  name="national_id" class="form-control" id="nationalID" />  
+                                    </div>       
+                                    <div class="input_text" >
+                                      <label for="customerAltPhone" class="form-label">Alternative Phone</label> 
+                                      <input  type="text"  name="customer-altPhone" class="form-control" id="customerAltPhone" />
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+
+                        <div class="main"> 
+                            <fieldset>
+                                <legend>Device Details</legend>
+                    
+                                <div class="input_div">
+                                    <div class="input_text">
+                                      <label for="brand" class="form-label">Brand</label> 
+                                      <input type="text" name="brand" class="form-control" id="brand" /> 
+                                    </div>
+                            
+                                    <div class="input_text">
+                                      <label for="model" class="form-label">Model</label> 
+                                      <input type="text" name="model" class="form-control" id="model" />
+                                    </div>
+                                </div>
+                    
+                                <div class="input_div">
+                                    <div class="input_text">
+                                      <label for="serial" class="form-label">Serial/IMEI</label> 
+                                      <input type="text" name="serial" class="form-control"  id="serial" /> 
+                                    </div>
+                            
+                                    <div class="input_text">
+                                      <label for="receipt" class="form-label">Receipt</label> 
+                                      <input type="text" name="receipt" class="form-control" id="receipt" /> 
+                                    </div>
+                                </div>
+                                    
+                            
+                                <fieldset>
+                                    <legend>Accessories</legend>
+                                    <div>
+                                        <ul>
+                                            <li>
+                                                <label for="battery">Battery</label>
+                                                <input type="checkbox" id="battery" name="battery" />
+                                            </li>
+                                            <li>
+                                                <label for="charger">Charger</label>
+                                                <input type="checkbox" id="charger" name="charger" />
+                                            </li>
+                                        </ul> 
+                                    </div>
+                                </fieldset>
+                                
+                                <fieldset>
+                                    <legend>Other</legend>
+                                    <div>
+                                        <label for="lipaMdogoMdogo">Lipa Mdogomdogo</label>
+                                        <input type="checkbox"  name="lipaMdogoMdogo"  id="lipaMdogoMdogo"  />
+                                    </div>
+                            
+                                    <div >
+                                        <label>Warranty</label>
+                                        <input type="checkbox"  name="warranty" />
+                                    </div>
+                            
+                                    <div>
+                                        <label>Repair History</label>
+                                        <input type="checkbox"  name="repairHistory" id="repairHistory" />
+                                    </div>
+                                </fieldset>           
+                    
+                            </fieldset>    
+                        </div>
+
+                        <div class="main"> 
+                            <fieldset id="Issue">
+                                <legend>Device Faults</legend>   
+                
+                                <fieldset id="display">
+                                    <legend>Display</legend>
+                                    <div>
+                                        <ul>
+                                            <li>
+                                                <label for="cracked">Cracked</label>
+                                                <input type="checkbox" name="cracked" class="display" 
+                                                   
+                                                            id="cracked" />
+                                            </li>
+                                            <li>
+                                                <label for='notWorking'>Not Powering Up</label>
+                                                <input type="checkbox"  name="notWorking" class="display" id="notWorking"  />      
+                                            </li>
+                                            <li>
+                                                    <label for="noTouch">No Touch</label>
+                                                    <input type="checkbox"  name="noTouch" class="display"  id="noTouch" />
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </fieldset>
+                
+                                <fieldset id="power">
+                                    <legend>Power</legend>
+                                    <div>
+                                        <ul>
+                                            <li>
+                                                <label>Not Powering Up</label>
+                                                <input type="checkbox"  name="notPoweringUp" class="power" id="notPoweringUp" />
+                                            </li>
+                                            <li>
+                                                <label>Short Battery Life</label>
+                                                <input type="checkbox"  name="shortBatteryLife" class="power"  id="shortBatteryLife" />   
+                                            </li>
+                                            <li>
+                                                <label>Not Charging</label>
+                                                <input type="checkbox"  name="notCharging" class="power"    id="notCharging" />
+                                            </li>
+                                        </ul>  
+                                    </div>
+                            
+                                </fieldset>
+                
+                                <fieldset id="speaker">
+                                    <legend>Speaker</legend>
+                                        <div>
+                                            <ul>
+                                                <li>
+                                                    <label for="noSound">No Sound</label>
+                                                    <input type="checkbox"  name="noSound" class="speaker"   id="noSound" />
+                                                </li>
+                                                <li>
+                                                    <label for="distortedSound">Distorted Sound</label>
+                                                    <input type="checkbox"  name="distortedSound" class="speaker"  id="distortedSound" />  
+                                                </li>
+                                                <li>
+                                                    <label for="notRinging">Not Ringing</label>
+                                                    <input type="checkbox"  name="notRinging" class="speaker"  id="notRinging" />  
+                                                </li>
+                                                </ul>
+                                        </div>                         
+                                </fieldset>
+                            
+                                <fieldset id="network">
+                                    <legend>Network</legend>
+                                    <div>
+                                        <ul>
+                                            <li>
+                                                <label for="noMobileNetwork">No Mobile Network</label>
+                                                <input type="checkbox"  name="noMobileNetwork" class="network" id="noMobileNetwork" />
+                                            </li>
+                                            <li>
+                                                <label for="noWifiNetwork">No Wifi</label>
+                                                <input type="checkbox"  name="noWifiNetwork" class="network"  id="noWifiNetwork" />  
+                                            </li>
+                                            <li>
+                                                <label for="droppedCalls">Dropping Calls</label>
+                                                <input type="checkbox"  name="droppedCalls" class="network"  id="droppedCalls" />  
+                                            </li>
+                                            <li>
+                                                <label for="unableToCall">Unable to make calls</label>
+                                                <input type="checkbox"  name="unableToCall" class="network"  id="unableToCall" />  
+                                            </li>
+                                        </ul> 
+                                    </div>
+                                                        
+                                </fieldset>
+                            
+                                <fieldset id="physicalDamage">
+                                    <legend>Physical Damage</legend>
+                                    <div>
+                                        <ul>
+                                            <li>
+                                                <label for="faultyKeys">Faulty keys</label>
+                                                <input type="checkbox"  name="faultyKeys" class="physicalDamage"  id="faultyKeys" /> 
+                                            </li>
+                                            <li>
+                                                <label for="crackedBody">Cracked Body</label>
+                                                <input type="checkbox"  name="crackedBody" class="physicalDamage"  id="crackedBody" /> 
+                                            </li>
+                                        </ul>
+                                    </div>                    
+                                </fieldset>
+                            
+                                <fieldset id="Software">
+                                    <legend>Software</legend>
+                                        <div>
+                                            <ul>
+                                                <li>
+                                                    <label for="slow" >Slow</label>
+                                                    <input type="checkbox"  name="slow" class="software" id="slow" /> 
+                                                </li>
+                                                <li>
+                                                    <label for="crashing">Crashing</label>
+                                                    <input type="checkbox"  name="crashing" class="software"  id="crashing" /> 
+                                                </li>
+                                                <li>
+                                                    <label for="hanging">Hanging</label>
+                                                    <input type="checkbox"  name="hanging" class="software"    id="hanging" /> 
+                                                </li>
+                                            </ul>
+                                        </div>                 
+                                </fieldset>
+                
+                            </fieldset>
+                        </div>
+
+                        <div class="main"> 
+                            <fieldset>
+                                <legend>Stand By Unit</legend>
+                                <div>
+                                    <label>StandBy Unit issued</label>
+                                    <input type="checkbox"  name="standByUnit" id="standByUnit" />
+                                </div>
+                                                
+                                <fieldset>
+                                    <legend>Stand by unit details</legend>
+                                    <div class="input_div">
+                                        <div class="input_text">
+                                            <label class="form-label">Brand</label>
+                                            <input type="text"  name="standByUnitBrand" class="form-control"  id="standByUnitBrand" />
+                                        </div>
+                                        <div class="input_text">
+                                          <label class="form-label">Model</label>
+                                          <input type="text"  name="standByUnitModel" class="form-control" id="standByUnitModel" />
+                                        </div>
+                                    </div>
+                                    <div class="input_div">
+                                        <div class="input_text">
+                                            <label class="form-label">Serial</label>
+                                            <input type="text"  name="standByUnitSerial" class="form-control" id="standByUnitSerial"/>
+                                        </div>
+                                    </div>
+                                    
+                                </fieldset>
+                            </fieldset>
+                        </div>
+
+                        <div class="main"> 
+                            <fieldset>         
+                                <legend>Repair Center Details</legend>         
+                                <div>
+                                    <label for="repair_center" class="form-label">Repair Center</label> 
+                                    <select name="repair_center" value="" class="form-control" id="repair_center">
+                                        <option value="Nokia">Nokia</option>
+                                        <option value="Samsung">Samsung</option>
+                                    </select>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="main"> 
+                            <fieldset>   
+                                    <legend>Retail Center Details</legend>
+                                        <div>
+                                            <label for="retail_center" class="form-label">Retail Center</label> 
+                                            <select name="retail_center" placeholder="Retail Center Name"  id="retail_center">
+                                                <option value="JKIA">JKIA</option>
+                                                <option value="Sarit">Sarit</option>
+                                            </select>
+                                        </div>              
+                            </fieldset>
+                        </div>   
+                        
+
+                         
+                    </div>
+                    <div class="col-12 text-end pb-2"> 
+                      <button class="btn btn-success prev_btn" >Previous</button> 
+                      <button class="btn btn-success next_btn" >Next</button>
+                      <button class="btn btn-success btn_hide" >Submit</button>  
+                  </div>  
+                </div>  
+              </div>  
+            </div>
+        </section>
 
     </main>
     <footer>
